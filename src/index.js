@@ -4,10 +4,10 @@ const imgbox = document.getElementById('imgbox');
 const file = document.getElementById('file');
 
 Promise.all([
-	faceapi.nets.tinyFaceDetector.loadFromUri('/assets'),
-	faceapi.nets.faceLandmark68Net.loadFromUri('/assets'),
-	faceapi.nets.faceRecognitionNet.loadFromUri('/assets'),
-	faceapi.nets.faceExpressionNet.loadFromUri('/assets')
+	faceapi.nets.tinyFaceDetector.loadFromUri('./assets'),
+	faceapi.nets.faceLandmark68Net.loadFromUri('./assets'),
+	faceapi.nets.faceRecognitionNet.loadFromUri('./assets'),
+	faceapi.nets.faceExpressionNet.loadFromUri('./assets')
 ]).then(() => {
 	file.addEventListener('change', onChange);
 });
