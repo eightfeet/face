@@ -17,16 +17,18 @@ body {
 }
 
 #imgbox {
-    width: fixpx(700);
+    width: 300px;
     margin: 0 auto;
     position: relative;
 }
 img {
-    width: 100%;
+    width: 300px;
     height: auto;
+    display: block;
 }
 canvas {
     position: absolute;
     left: 0;
+    top: 0;
     z-index: 3;
 }

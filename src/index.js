@@ -6,7 +6,7 @@ const file = document.getElementById('file');
 Promise.all([
 	faceapi.nets.tinyFaceDetector.loadFromUri('./assets'),
 	faceapi.nets.faceLandmark68Net.loadFromUri('./assets'),
-	faceapi.nets.faceRecognitionNet.loadFromUri('./assets'),
+	// faceapi.nets.faceRecognitionNet.loadFromUri('./assets'),
 	faceapi.nets.faceExpressionNet.loadFromUri('./assets')
 ]).then(() => {
 	file.addEventListener('change', onChange);
@@ -22,7 +22,8 @@ async function onChange() {
 	img.onload = async () => {
 		const canvas = faceapi.createCanvasFromMedia(img);
 		imgbox.append(canvas);
-		const displaySize = { width: img.width, height: img.height };
+
+		const displaySize = { width: imgbox.offsetWidth, height: imgbox.offsetHeight };
 		faceapi.matchDimensions(canvas, displaySize);
 		const detections = await faceapi.detectAllFaces(img, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
 		const resizedDetections = faceapi.resizeResults(detections, displaySize);
@@ -66,7 +67,7 @@ async function onChange() {
 			rec.style.transform = `rotate(${ANGLE}deg)`;
 			rec.style.webkitTransform = `rotate(${ANGLE}deg)`;
 			Papa.appendChild(rec);
-			alert('绘图完成');
+			alert('识别完成');
 		}
 	};
 }
