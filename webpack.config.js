@@ -191,7 +191,7 @@ module.exports = (env, argv) => {
 		plugins: [
 			new webpack.NoEmitOnErrorsPlugin(),
 			new HtmlWebpackPlugin({
-				title: '项目标题',
+				title: 'face',
 				template: './index.ejs',
 				minify: { collapseWhitespace: true },
 				favicon: './favicon.ico'
@@ -214,7 +214,7 @@ module.exports = (env, argv) => {
 			.concat(argv.report ? [new BundleAnalyzerPlugin()] : []),
 		devtool: isPro || isUat ? 'source-map' : 'cheap-module-eval-source-map',
 		devServer: {
-			port: process.env.PORT || 8090,
+			port: process.env.PORT || 8099,
 			host: 'localhost', // host: '0.0.0.0',
 			publicPath: '/',
 			contentBase: './src',

@@ -66,6 +66,7 @@ async function onChange() {
 			rec.style.transform = `rotate(${ANGLE}deg)`;
 			rec.style.webkitTransform = `rotate(${ANGLE}deg)`;
 			Papa.appendChild(rec);
+			alert('绘图完成');
 		}
 	};
 }
