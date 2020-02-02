@@ -1,0 +1,19 @@
+{
+    "sourceMaps": true,
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+            "corejs": false,
+            "helpers": true,
+            "regenerator": true,
+            "useESModules": true
+          }
+      ],
+      ["@babel/plugin-transform-react-jsx", { "pragma": "h" }],
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-syntax-dynamic-import"
+    ]
+  }
+  

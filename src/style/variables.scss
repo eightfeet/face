@@ -1,0 +1,20 @@
+$ui-perrem: 31;
+
+/* stylelint-disable */
+/***
+fixpx
+***/
+@function fixpx($px) {
+  @return ($px/$ui-perrem)+rem;
+}
+
+/***
+color
+基础色彩 $gray $green $red $orange $blue
+按照$-light,$-dark分为2个级别，
+$gray 会衍生更多级别（-dark,-darker,-darkest,-light,-lighter,-lightest）
+***/
+//gray
+$bgcolor: #f6f6f6;
+
+

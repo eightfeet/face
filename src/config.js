@@ -1,0 +1,1 @@
+export const setVariables = __PRO__ ? 'pro' : 'uat or dev';

@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+// your global style;
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#file {
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    text-align: center;
+    padding: fixpx(10);
+    border-radius: fixpx(6);
+}
+
+#imgbox {
+    width: fixpx(700);
+    margin: 0 auto;
+    position: relative;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+canvas {
+    position: absolute;
+    left: 0;
+}
