@@ -36,18 +36,18 @@ async function onChange() {
 
 			const pA = points[17];
 			const pB = points[26];
-			const pC = points[45];
-			const pD = points[36];
+			// const pC = points[45];
+			// const pD = points[36];
 
 			const ctx=canvas.getContext("2d");
 			ctx.fillStyle="red";
 			
-			ctx.moveTo(pA.x,pA.y);
-			ctx.lineTo(pB.x,pB.y);
-			ctx.lineTo(pC.x,pC.y);
-			ctx.lineTo(pD.x,pD.y);
-			ctx.lineTo(pA.x,pA.y);
-			ctx.stroke();
+			// ctx.moveTo(pA.x,pA.y);
+			// ctx.lineTo(pB.x,pB.y);
+			// ctx.lineTo(pC.x,pC.y);
+			// ctx.lineTo(pD.x,pD.y);
+			// ctx.lineTo(pA.x,pA.y);
+			// ctx.stroke();
 
 			// 求钜行长度
 			const L = Math.sqrt(Math.pow((pB.x - pA.x), 2) + Math.pow((pB.y - pA.y), 2));
@@ -61,14 +61,15 @@ async function onChange() {
 			rec.style.position = 'absolute';
 			rec.style.left = `${pA.x}px`;
 			rec.style.top = `${pA.y}px`;
-			rec.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
+			// rec.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
 			rec.style.webkitTransformOrigin = '0 0';
 			rec.style.transformOrigin = '0 0';
 			
 			rec.style.transform = `rotate(${ANGLE}deg) translate3d(0,0,0)`;
 			rec.style.webkitTransform = `rotate(${ANGLE}deg) translate3d(0,0,0)`;
+			rec.classList.add('yj');
 			Papa.appendChild(rec);
-			alert('识别完成');
+			console.log('!!!!!!!!!!!!!识别完成');
 		}
 	};
 }
